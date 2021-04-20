@@ -16,7 +16,6 @@ const AddService = () => {
     const history = useHistory();
 
     const handleImageUpload = event => {
-        console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key','5ec90382132c3cc1482448c4c48cc5dd');
         imageData.append('image',event.target.files[0])

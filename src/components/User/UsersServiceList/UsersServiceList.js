@@ -5,11 +5,11 @@ import { UserContext } from '../../../App';
 
 const UsersServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [usersServiceList,setUsersServiceList] = useState([]);
+    const [orders,setOrders] = useState([]);
     useEffect(() => {
         fetch('https://nameless-caverns-23094.herokuapp.com/orders')
         .then(res => res.json())
-        .then(data => setUsersServiceList(data))
+        .then(data => setOrders(data))
     } ,[])
     return (
         <div className="container">
@@ -27,13 +27,30 @@ const UsersServiceList = () => {
                 <div className="col-md-9 mt-4">
                    <h2> Service List</h2>
                    <hr/>
-                   {
-                    usersServiceList.map(order => 
-                        <ul>
-                            <li>{order?.service}</li>
-                        </ul>
-                    )
-                }
+                   <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            orders.map(order => 
+                                <tr>
+                                    <td>{order.service}</td>
+                                    <td>{order.description}</td>
+                                    <td>{order.status}</td>
+                                    <td><img src={order.image} className="img-fluid rounded" alt=""/></td>
+                                </tr>
+                            )
+                        }
+                            
+                        </tbody>
+                    </table>
+                   
                 </div> 
                         
             </div>

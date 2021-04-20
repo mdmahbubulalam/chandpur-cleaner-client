@@ -10,6 +10,7 @@
     cursor: pointer;
     background-color: lightgray;
     border-radius: 10px;
+    border: 5px solid lightslategrey;
 }
 
 .serviceCard:hover{

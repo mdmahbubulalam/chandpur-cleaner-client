@@ -27,9 +27,11 @@ const UsersService = () => {
             userEmail: loggedInUser.email,
             userName: loggedInUser.name,
             service: service?.title,
+            description: service?.description,
             payWith:'Credit Card',
             status:'Pending',
-            date: new Date().toDateString('dd/mm/yyyy')
+            date: new Date().toDateString('dd/mm/yyyy'),
+            image: service?.image
         }
 
         const url = `https://nameless-caverns-23094.herokuapp.com/addOrder`
@@ -62,16 +64,18 @@ const UsersService = () => {
                     <h2>Service</h2>
                     <hr/>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                    <div class="form-group">
-                        <input type="text"  name="userName" class="form-control" value={loggedInUser.name} />
-                    </div>
-                    <div class="form-group">
-                        <input type="text"  class="form-control" name="userEmail" value={loggedInUser.email}/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text"  class="form-control" name="service" value={service?.title}/>
-                    </div>
-                    
+                        <div class="form-group">
+                            <input type="text"  name="userName" class="form-control" value={loggedInUser.name} />
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  class="form-control" name="userEmail" value={loggedInUser.email}/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  class="form-control" name="service" value={service?.title}/>
+                        </div>
+                        <div>
+                            <h5>Your service charge will be ${service?.price}</h5>
+                        </div>
                         <button type="submit" className="btn btn-success" >pay</button>
                     </form>
                 </div> 
