@@ -11,7 +11,7 @@ const UsersService = () => {
     const {id} = useParams();
     const [services,setServices] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/services')
+        fetch('https://nameless-caverns-23094.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -32,7 +32,7 @@ const UsersService = () => {
             date: new Date().toDateString('dd/mm/yyyy')
         }
 
-        const url = `http://localhost:5000/addOrder`
+        const url = `https://nameless-caverns-23094.herokuapp.com/addOrder`
         fetch(url, {
             method:'POST',
             headers:{

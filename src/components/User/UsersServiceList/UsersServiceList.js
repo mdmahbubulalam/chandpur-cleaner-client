@@ -7,7 +7,7 @@ const UsersServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [usersServiceList,setUsersServiceList] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://nameless-caverns-23094.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setUsersServiceList(data))
     } ,[])

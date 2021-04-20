@@ -37,7 +37,7 @@ const AddService = () => {
         formData.append('price', info.servicePrice);
         formData.append('description', info.serviceDescription);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://nameless-caverns-23094.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

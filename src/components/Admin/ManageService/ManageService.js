@@ -6,7 +6,7 @@ import SideBar from '../Sidebar/SideBar';
 const ManageService = () => {
     const [services,setServices] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/services')
+        fetch('https://nameless-caverns-23094.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
@@ -14,7 +14,7 @@ const ManageService = () => {
     const history = useHistory();
 
     const deleteService = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://nameless-caverns-23094.herokuapp.com/delete/${id}`,{
             method: "DELETE"
         })
         .then(res => res.json())
