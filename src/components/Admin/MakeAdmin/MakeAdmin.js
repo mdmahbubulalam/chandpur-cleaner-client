@@ -6,7 +6,9 @@ const MakeAdmin = () => {
     return (
         <div className="container">
             <div className="text-center">
-                <img src={logo} className="w-25 mb-2" alt=""/>
+                <a href="/">
+                    <img src={logo} className="w-25 mb-2" alt=""/>
+                </a> 
             </div>
             <div className="row">
                 
