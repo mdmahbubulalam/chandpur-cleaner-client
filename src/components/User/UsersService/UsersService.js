@@ -63,12 +63,12 @@ const UsersService = () => {
                 <div className="col-md-9 mt-4">
                     <h2>Service</h2>
                     <hr/>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    
                         <div class="form-group">
                             <input type="text"  name="userName" class="form-control" value={loggedInUser.name} />
                         </div>
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="userEmail" value={loggedInUser.email}/>
+                            <input type="email"  class="form-control" name="userEmail" value={loggedInUser.email}/>
                         </div>
                         <div class="form-group">
                             <input type="text"  class="form-control" name="service" value={service?.title}/>
@@ -76,6 +76,7 @@ const UsersService = () => {
                         <div>
                             <h5>Your service charge will be ${service?.price}</h5>
                         </div>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <button type="submit" className="btn btn-success" >pay</button>
                     </form>
                 </div> 

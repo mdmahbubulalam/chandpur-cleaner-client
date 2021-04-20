@@ -7,7 +7,7 @@ const UsersServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [orders,setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://nameless-caverns-23094.herokuapp.com/orders')
+        fetch('https://nameless-caverns-23094.herokuapp.com/orders?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setOrders(data))
     } ,[])
@@ -27,6 +27,7 @@ const UsersServiceList = () => {
                 <div className="col-md-9 mt-4">
                    <h2> Service List</h2>
                    <hr/>
+                   <p>You have ordered {orders.length} product. Your email address is - <b>{loggedInUser.email}</b></p>
                    <table class="table table-bordered">
                         <thead>
                             <tr>
