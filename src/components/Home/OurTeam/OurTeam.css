@@ -1,0 +1,35 @@
+.font-color{
+    color: #FF780F;
+}
+
+.social-icon .icon{
+    height: 40px;
+    width: 40px;
+    color: #FF780F;
+    border-radius: 50%;
+    border: 1px solid #FF780F;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.social-icon .icon:hover{
+    background-color: #FF780F;
+    color: white;
+}
+
+.img-thumbnail{
+    overflow: hidden;
+    
+}
+
+.img-thumbnail img{
+    transition: all 0.5s ease;
+    
+}
+
+.img-thumbnail img:hover{
+    transform: scale(1.05);
+    
+}
+
+

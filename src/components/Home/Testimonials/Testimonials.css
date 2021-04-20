@@ -1,0 +1,12 @@
+.font-color{
+    color: #FF780F;
+}
+
+.testimonial-card{
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.testimonial-card:hover{
+    transform: scale(1.1)
+}

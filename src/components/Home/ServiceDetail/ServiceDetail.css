@@ -1,0 +1,19 @@
+.service-icon{
+    font-size: 2rem;
+    color: rgb(75, 134, 245);
+}
+
+.serviceCard{
+    padding: 20px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.serviceCard:hover{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+}

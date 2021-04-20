@@ -1,0 +1,12 @@
+
+.font-color{
+    color: #FF780F;
+}
+
+.input-bg{
+    background-color: rgb(224, 224, 224);
+}
+
+.input-bg:hover{
+    background-color: rgb(190, 190, 190);
+}
